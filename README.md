@@ -1,6 +1,7 @@
 # Cipher Application : A Simple Tool for Encryption & Decryption
 
-A simple and stylish web page featuring a centered form with a modern translucent container, animated colorful background blobs, and a large, subtle animated background text "KaiSed" behind the content.
+This project is called the **Cipher Application**. It is a simple and useful program built using **HTML, CSS and JavaScript**. The main goal of this project is to provide an easy-to-use tool for encrypting and decrypting messages securely and interactively.
+
 
 ## Features
 
@@ -13,6 +14,23 @@ A simple and stylish web page featuring a centered form with a modern translucen
 
 - HTML5
 - CSS3 (Including Animations &  Flexbox)
+
+## 🔐 Encryption Algorithms Used
+
+This application supports the following **four well-known encryption algorithms**:
+
+1. **Caesar Cipher**  
+   A substitution cipher where each letter in the plaintext is shifted a fixed number of positions forward in the alphabet.
+
+2. **Vigenère Cipher**  
+   A polyalphabetic cipher that uses a keyword to shift letters differently across the message, offering better security than Caesar.
+
+3. **ROT13 Cipher**  
+   A special case of Caesar Cipher with a fixed shift of 13. Used to obfuscate text in online forums or casual communication.
+
+4. **Bacon Cipher**  
+   An early form of steganography that encodes each letter into a unique sequence of 'A's and 'B's.
+
 
 ## How to Use
 
