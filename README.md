@@ -6,14 +6,13 @@ A simple and stylish web page featuring a centered form with a modern translucen
 
 - Responsive centered form container with glassmorphism style
 - Animated colorful background blobs for a dynamic look
-- Large animated "KaiSed" text softly floating in the background
 - Clean and readable input fields with focus effects
 - Smooth button hover animations
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (including animations and flexbox)
+- CSS3 (Including Animations &  Flexbox)
 
 ## How to Use
 
@@ -43,6 +42,6 @@ A simple and stylish web page featuring a centered form with a modern translucen
 
 ---
 
-Made by KaiSed
+# Made by KaiSed
 
 Email : a.r.kaised.7698@gmail.com
