@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Application</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Cipher Application</h1>
+        <div class="form-group">
+            <div>
+                <textarea id="input" class="textarea" placeholder="Enter text to encrypt/decrypt"></textarea>
+            </div>
+            <div class="input-group">
+                <input type="text" id="key" class="input" placeholder="Enter key (For Ceasar & Vigenère)">
+                <select id="cipher" class="select">
+                    <option value="caesar">Caesar</option>
+                    <option value="vigenere">Vigenère</option>
+                    <option value="rot13">ROT13</option>
+                    <option value="bacon">Bacon</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button id="encrypt" class="button encrypt">Encrypt</button>
+                <button id="decrypt" class="button decrypt">Decrypt</button>
+            </div>
+            <div class="output-group">
+                <textarea id="output" class="textarea" placeholder="Output" readonly></textarea>
+                <button id="copy" class="copy-button">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

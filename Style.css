@@ -1,0 +1,221 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #111; /* dark base text color */
+  position: relative;
+}
+
+/* Animated background blobs */
+body::before, body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  background: #ff6a88;
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+body::after {
+  width: 500px;
+  height: 500px;
+  background: #ffbc00;
+  bottom: -200px;
+  right: -200px;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(20px) translateX(20px);
+  }
+}
+
+/* Container styling */
+.container {
+  background: rgba(255, 255, 255, 0.85); /* lighter background for dark text */
+  border-radius: 20px;
+  padding: 40px 48px;
+  width: 600px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  animation: fadeInUp 0.6s ease forwards;
+  color: #111; /* container text color */
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: 2px;
+  color: #111; /* dark title text */
+  text-shadow: none;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Textarea, Input, Select */
+.textarea, .input, .select {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111; /* dark text */
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  resize: none;
+  font-weight: 600;
+}
+
+/* Placeholder color */
+.textarea::placeholder,
+.input::placeholder,
+.select {
+  color: #666; /* medium gray placeholder */
+  opacity: 1;
+}
+
+/* Focus states */
+.textarea:focus,
+.input:focus,
+.select:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 15px 3px rgba(0,0,0,0.2);
+  color: #111;
+}
+
+/* Input group styling */
+.input-group {
+  display: flex;
+  gap: 16px;
+}
+
+.input {
+  flex-grow: 1;
+}
+
+/* Button styling */
+.button {
+  flex: 1;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+  background-size: 200% 100%;
+  transition: background-position 0.5s ease, box-shadow 0.3s ease;
+  color: #fff;
+  user-select: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.button.encrypt {
+  background-image: linear-gradient(45deg, #4f93ce, #285f9c);
+}
+
+.button.encrypt:hover {
+  background-position: 100% 0;
+  box-shadow: 0 6px 20px #4f93ceaa;
+}
+
+.button.decrypt {
+  background-image: linear-gradient(45deg, #2ebf91, #1c7961);
+}
+
+.button.decrypt:hover {
+  background-position: 100% 0;
+  box-shadow: 0 6px 20px #2ebf91aa;
+}
+
+/* Output group */
+.output-group {
+  position: relative;
+  margin-top: 16px;
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: rgba(0,0,0,0.1);
+  border-radius: 12px;
+  color: #111;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.copy-button:hover {
+  background: #111;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Textarea output readonly */
+.textarea[readonly] {
+  background: rgba(240, 240, 240, 0.8);
+  color: #111;
+  cursor: not-allowed;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+  user-select: text;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
